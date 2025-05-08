@@ -3,7 +3,6 @@
     src: url(./font/plain-light-webfont.ttf);
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +13,18 @@
 html,body{
     width: 100%;
     height: 100%;
+}
+/* cursor */
+.crsr{
+    height: 2.3vw;
+    width: 2.3vw;
+    /* background-color: #fff; */
+    border: 1px solid #d1cfcf9e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
 }
 .loader{
     background-color: #0B0B0B;
@@ -103,4 +114,56 @@ html,body{
     background-color: #151515;
     height: 100vh;
     width: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3vw 5vw;
+}
+.page1 .nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+.nav-part2 h4{
+    font-size: 0.8vw;
+    font-weight: 700;
+}
+
+.hero{
+    /* background-color: red; */
+    width: 72%;
+    margin-left:27%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+}
+.hero:nth-child(2){
+    margin-top: 20vh;
+}
+.hero h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    font-weight: 600;
+}
+
+.hero h2, .hero h3{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7vw;
+    font-weight: 600;
+}
+
+.hero h2:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    font-family: "plain light";
 }

@@ -42,5 +42,28 @@ function loaderAnimation() {
   t1.to(".loader", {
     display: "none",
   });
+  // nav
+  t1.from(".nav",{
+    opacity:0,
+  });
+  // page 2 h1
+  t1.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero4 h1",{
+    y:120,
+    stagger:0.2,
+  });
+}
+
+
+// cursor
+function cursorAnimation(){
+  document.addEventListener("mousemove",function(dets){
+    gsap.to(".crsr",{
+      left:dets.x,
+      top:dets.y,
+    })
+  })
+  
+  Shery.makeMagnet(".nav-part2 h4");
 }
 loaderAnimation();
+cursorAnimation();
